@@ -11,7 +11,7 @@ We then created a basic database with a password from [pwqgen](https://pwqgen.he
 Saudi7settle+Strap
 ```
 
-![alt text](test.png)
+![alt text](test/test.png)
 
 And called it test.kbdx.
 
@@ -20,7 +20,7 @@ We now have our vault but still need (1) to convert it into a crackable hash and
 
 * Hash
 
-We grabbed [HarmJ0y's keepass2john.py](https://gist.github.com/HarmJ0y/116fa1b559372804877e604d7d367bbc) and used it to generate a crackable hash from our test.kbdx vault, saving the hash as test.hash.
+We grabbed [HarmJ0y's keepass2john.py](https://github.com/spencermwoo/Cracking/blob/master/KeePass/keepass2john.py) and used it to generate a crackable hash from our test.kbdx vault, saving the hash as test.hash.
 
 ```$ py keepass2john.py test.kbdx```
 
@@ -28,7 +28,7 @@ We grabbed [HarmJ0y's keepass2john.py](https://gist.github.com/HarmJ0y/116fa1b55
 
 * Wordlist
 
-We grabbed a wordlist from [berzerk0's Probable-Wordlists](https://github.com/berzerk0/Probable-Wordlists/blob/master/Real-Passwords/Top207-probable-v2.txt) and [added our password](https://github.com/spencermwoo/Cracking/blob/master/KeePass/Top207-probable-v2.txt#L203) near the end.
+We grabbed a wordlist from [berzerk0's Probable-Wordlists](https://github.com/berzerk0/Probable-Wordlists/blob/master/Real-Passwords/Top207-probable-v2.txt) and [added our password](https://github.com/spencermwoo/Cracking/blob/master/KeePass/wordlists/Top207-probable-v2.txt#L203) near the end.
 
 
 ### Running Hashcat
@@ -49,7 +49,7 @@ We ran [hashcat](https://hashcat.net/hashcat/) on our hash file with our diction
 
 Success!
 
-![alt text](test_success.png)
+![alt text](test/test_success.png)
 
 We've successfully put the pieces together to crack a basic .kbdx file!
 

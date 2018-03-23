@@ -6,12 +6,12 @@ import time
 
 _ALPHABET = digits + ascii_letters + "!@#$%^&*()"
 
-filepath = os.path.join(os.getcwd())
+filepath = os.path.join(os.getcwd(), "wordlists")
 filename = "pwlist.txt"
 
 def generate():
 	write_file(filepath, filename, "", "w")
-	content = brute_array(_ALPHABET, 1, "first", -1)
+	content = brute_array(_ALPHABET, 2, "first", -1)
 
 	write_file(filepath, filename, content, "a")
 
@@ -23,8 +23,8 @@ def brute_array(alphabet, num_tokens, base, index):
 	
 	total_content = base
 
-	count = 0
 	pause_count = 1000000000
+	count = 0
 
 	for i in range(offset, offset + num):
 		total_content += "\n" + base + get_alphabet_string(alphabet, i);	
