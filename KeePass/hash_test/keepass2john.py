@@ -98,7 +98,7 @@ def process_2x_database(data, databaseName):
             transformSeed = hexlify(data[index:index+uSize])
 
         if btFieldID == 6:
-            transformRounds = struct.unpack("H", data[index:index+2])[0]
+            transformRounds = struct.unpack("Q", data[index:index+8])[0]
 
         if btFieldID == 7:
             initializationVectors = hexlify(data[index:index+uSize])
