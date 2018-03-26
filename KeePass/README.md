@@ -1,5 +1,5 @@
 # Background
-My friend uses [KeePass](https://keepass.info/) as a password manager and unfortunately forgot the master password.  Normally it's a [lost cause](https://superuser.com/a/80380) to brute force however my friend believed they remembered a good chunk of the password.  Instead of resetting a multitiude of passwords we decided to try our hand at cracking the vault.  This is our attempt.
+My friend uses [KeePass](https://keepass.info/) as a password manager and unfortunately forgot the master password.  Normally it's a [lost cause](https://superuser.com/a/80380) to brute force however my friend believed they remembered a good chunk of the password.  Instead of resetting (or losing) all those passwords we decided to try our hand at cracking the vault.  This is our attempt.
 
 # Basic Crack
 Our first step was to successfully crack a simple vault. If this was possible we had promise in cracking the real thing.
@@ -13,16 +13,16 @@ Saudi7settle+Strap
 
 ![alt text](test/test.png)
 
-And called it test.kbdx.
+And called it test.kdbx.
 
 ### Setup Crack
-We now have our vault but still need (1) to convert it into a crackable hash and (2) a password list.
+We now have our vault but still need (1) to convert it into a crackable hash and (2) have a password list.
 
 * Hash
 
-We grabbed [HarmJ0y's keepass2john.py](https://github.com/spencermwoo/Cracking/blob/master/KeePass/keepass2john.py) and used it to generate a crackable hash from our test.kbdx vault, saving the hash as test.hash.
+We grabbed [HarmJ0y's keepass2john.py](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py) (python2) and used it to generate a crackable hash from our test.kdbx vault, saving the hash as test.hash.
 
-```$ py keepass2john.py test.kbdx```
+```$ py keepass2john.py test.kdbx```
 
 ```test:$keepass$*2*60000*222*a339edcdaf7d1216d4016b5d80c7e5560e1278f54c963d78cec26c8f388b87ec*f552cf7fd8209a99cdbc957bca9eda067c83d5c8f6bdcd810eb35628661dffa8*4cd47adb5446f6c95eebed4c34128f19*0fab1f230bf8b5b3c32ba5c33ec3cd2501c41dc7d07504651393c596d27f7357*4c7de0a343dfcac9cd62fdec0eb1b4ecc75366f750b0311d3729f4de004f6e91```
 
@@ -51,14 +51,56 @@ Success!
 
 ![alt text](test/test_success.png)
 
-We've successfully put the pieces together to crack a basic .kbdx file!
+We've successfully put the pieces together to crack a basic .kdbx file!
 
 
-# Real Crack
+# Hash Crack
+It turns out the major pieces to crack a KeePass database are having a hash from our .kdbx file and a proper wordlist.  Because we already have my friend's .kdbx file then all that's remaining is a proper wordlist?
 
-It turns out the major pieces to crack a KeePass database are having a hash from our .kbdx file and a proper wordlist.  We already have my friend's .kbdx file so the only thing remaining is generating a proper wordlist.  Our remaining questions were 
+Not so fast.  Another difference is that when creating the vault my friend increased the hash iterations significantly, such that logging normally would take about a second.  Specifically when creating the vault they used the Security > 1 Second Deplay to use a 'deterministicly random' hash iteration count.
 
-* What's the best way to generate our wordlist?
-* How does keepass2john.py work?
-* Does an increased hash number change the process?
-* Any other modifications to our basic crack for our real-world crack attempt?
+![alt text](hash_test/hash_test.png)
+
+Will our steps for the basic crack work with increased hashes?
+
+We create the database using password ```Saudi7settle+Strap``` and same [wordlist](https://github.com/spencermwoo/Cracking/blob/master/KeePass/wordlists/Top207-probable-v2.txt#L203).
+
+We run the python script and save the hash as hash_test.hash
+```$ py keepass2john.py hash_test.kdbx```
+
+```hash_test:$keepass$*2*27648*222*5bad084314051bc38d439d3211317fdba5dca739eac923ccaa2bb21d1de5178f*835ccf2cd3db3874be7d655c1f31887248d2e7025bfd61bb5c19862a0cb0d3d8*9cc0b342fce5cfa55ec830f1443efa69*0fbe057ea7fc655800ab354cbdc3b79eaf1a6eb5fce14312e6ab450bb445d139*f6f984c16ffaedacb2aaedd70c7e54136ccc31fe78bd31c17996e0647453a6ef```
+
+We remove the database name that is prepended so that our hash is now 
+```$keepass$*2*27648*222*5bad084314051bc38d439d3211317fdba5dca739eac923ccaa2bb21d1de5178f*835ccf2cd3db3874be7d655c1f31887248d2e7025bfd61bb5c19862a0cb0d3d8*9cc0b342fce5cfa55ec830f1443efa69*0fbe057ea7fc655800ab354cbdc3b79eaf1a6eb5fce14312e6ab450bb445d139*f6f984c16ffaedacb2aaedd70c7e54136ccc31fe78bd31c17996e0647453a6ef```
+
+and we run hashcat on this file with our old dictionary list
+```$ ./hashcat64.exe -m 13400 hash_test.hash Top207-probable-v2.txt```
+
+and we failed.
+![alt text](hash_test/failure.png)
+
+We're using a password that is in our wordlist and should be found, but it seems increasing the hash iterations breaks our use case.  Let's find out what's happening!
+
+### Investigation
+Explain intuition.  Hashes (#todo)
+
+We compare the two hashes
+* Default
+```$keepass$*2*60000*222*a339edcdaf7d1216d4016b5d80c7e5560e1278f54c963d78cec26c8f388b87ec*f552cf7fd8209a99cdbc957bca9eda067c83d5c8f6bdcd810eb35628661dffa8*4cd47adb5446f6c95eebed4c34128f19*0fab1f230bf8b5b3c32ba5c33ec3cd2501c41dc7d07504651393c596d27f7357*4c7de0a343dfcac9cd62fdec0eb1b4ecc75366f750b0311d3729f4de004f6e91```
+
+* Iterations
+```$keepass$*2*13056*222*8566bee050e1a69bd90044013c36a76ed0cda2e85133c2f0ea95018cf97a5982*e1bbc858fc6ad4d726e778e1db6dfb6d84143f96be51f387ba89610c4c1cefe7*7ceed46e2420ec4c68a1d6cc8bb872ec*7bc6c7a6398e3d7ad472fc9afedb58578ccf04d9e7d03eda3d20a9d02e1932a2*fbbf4725cf5bc99b928ad2cbddef00d4a20ef4a73bf56ba5a68ba31047ed440b```
+
+We note that the third parameter (asterisk-delimited) is different and seems to relate to the hash iterations.  This is confirmed when we open the python file and see that the third parameter output is [transformRounds](https://github.com/spencermwoo/Cracking/blob/master/KeePass/wordlists/Top207-probable-v2.txt#L114).  We conjecture that this transform rounds should be our ```17052416``` value from using the 1 Second Delay and our basic crack worked because ```60000``` is the default transformRounds.
+
+We test our hypothesis by manually updating our hash file to put in our expected transformRounds
+```$keepass$*2*17052416*222*5bad084314051bc38d439d3211317fdba5dca739eac923ccaa2bb21d1de5178f*835ccf2cd3db3874be7d655c1f31887248d2e7025bfd61bb5c19862a0cb0d3d8*9cc0b342fce5cfa55ec830f1443efa69*0fbe057ea7fc655800ab354cbdc3b79eaf1a6eb5fce14312e6ab450bb445d139*f6f984c16ffaedacb2aaedd70c7e54136ccc31fe78bd31c17996e0647453a6ef```
+
+We run hashcat again, fingers crossed.
+```$ ./hashcat64.exe -m 13400 hash_test.hash Top207-probable-v2.txt```
+
+It's apparent that hashcat is running for a signficiantly longer time...
+
+![alt text](hash_Test/success.png)
+
+Success!
