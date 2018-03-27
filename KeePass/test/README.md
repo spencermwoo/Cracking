@@ -13,11 +13,14 @@ Saudi7settle+Strap
 And called it test.kdbx.
 
 ### Setup Crack
-We now have our vault but still need (1) to convert it into a crackable hash and (2) have a password list.
+We now have our vault but still need to 
+
+1. convert it into a crackable hash and
+2. create a password list.
 
 * Hash
 
-We grabbed [HarmJ0y's keepass2john.py](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py) (python2) and used it to generate a crackable hash from our test.kdbx vault, saving the hash as test.hash.
+We grabbed [HarmJ0y's keepass2john.py](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py) and used it to generate a crackable hash from our test.kdbx vault, saving the hash as test.hash.
 
 ```$ py keepass2john.py test.kdbx```
 
@@ -29,10 +32,9 @@ We grabbed a wordlist from [berzerk0's Probable-Wordlists](https://github.com/be
 
 
 ### Running Hashcat
+Now we have a hash file that is compatible with hashcat and should be cracked with our wordlist.
 
-Now we ostensbily have a hash file that is compatible with hashcat and should be cracked by our wordlist.
-
-We looked up the [types of hashes](https://hashcat.net/wiki/doku.php?id=example_hashes) that hashcat can handle and found the Keepass 2 section, specifically 13400 Keepass 2 AES / with keyfile.  We modified our test.hash (removing the "test" database reference in the beginning) to conform our hash to the provided example of a valid 13400 hash.
+We looked up the [types of hashes](https://hashcat.net/wiki/doku.php?id=example_hashes) that hashcat can handle and found the Keepass 2 section, specifically ```13400 Keepass 2 AES / with keyfile```.  We modified our test.hash (removing the "test" database reference in the beginning) to conform our hash to the provided example of a valid 13400 hash.
 
 * Hash
 ```$keepass$*2*60000*222*a339edcdaf7d1216d4016b5d80c7e5560e1278f54c963d78cec26c8f388b87ec*f552cf7fd8209a99cdbc957bca9eda067c83d5c8f6bdcd810eb35628661dffa8*4cd47adb5446f6c95eebed4c34128f19*0fab1f230bf8b5b3c32ba5c33ec3cd2501c41dc7d07504651393c596d27f7357*4c7de0a343dfcac9cd62fdec0eb1b4ecc75366f750b0311d3729f4de004f6e91```
