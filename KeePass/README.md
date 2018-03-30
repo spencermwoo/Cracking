@@ -37,7 +37,7 @@ We now have our vault but still need to
 
 We grabbed [HarmJ0y's keepass2john.py](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py) and used it to generate a crackable hash from our test.kdbx vault, saving the hash as test.hash.
 
-```$ py keepass2john.py test.kdbx```
+```$ python2 keepass2john.py test.kdbx```
 
 ```test:$keepass$*2*60000*222*a339edcdaf7d1216d4016b5d80c7e5560e1278f54c963d78cec26c8f388b87ec*f552cf7fd8209a99cdbc957bca9eda067c83d5c8f6bdcd810eb35628661dffa8*4cd47adb5446f6c95eebed4c34128f19*0fab1f230bf8b5b3c32ba5c33ec3cd2501c41dc7d07504651393c596d27f7357*4c7de0a343dfcac9cd62fdec0eb1b4ecc75366f750b0311d3729f4de004f6e91```
 
@@ -76,7 +76,7 @@ It turns out the major pieces to crack a KeePass database are
 
 We have our .kdbx file, so all that's left is a proper wordlist?  Not so fast.
 
-Another difference with a real-world example is the [hash iterations|https://en.wikipedia.org/wiki/Cryptographic_hash_function].  When creating the vault my friend significantly increased the hash iterations such that logging in normally would take about a second each time.  Specifically when creating the vault he used the ```Security > 1 Second Deplay``` option to use a 'deterministicly random' hash iteration count.
+Another difference with a real-world example is the [hash iterations](https://en.wikipedia.org/wiki/Cryptographic_hash_function).  When creating the vault my friend significantly increased the hash iterations such that logging in normally would take about a second each time.  Specifically when creating the vault he used the ```Security > 1 Second Deplay``` option to use a 'deterministicly random' hash iteration count.
 
 ![alt text](images/hash_test.png)
 
@@ -87,7 +87,7 @@ We create a new database using password ```Saudi7settle+Strap``` and increase th
 
 We run the python script, remove the database name, and save the hash as hash_test.hash
 
-```$ py keepass2john.py hash_test.kdbx```
+```$ python2 keepass2john.py hash_test.kdbx```
 
 ```$keepass$*2*27648*222*5bad084314051bc38d439d3211317fdba5dca739eac923ccaa2bb21d1de5178f*835ccf2cd3db3874be7d655c1f31887248d2e7025bfd61bb5c19862a0cb0d3d8*9cc0b342fce5cfa55ec830f1443efa69*0fbe057ea7fc655800ab354cbdc3b79eaf1a6eb5fce14312e6ab450bb445d139*f6f984c16ffaedacb2aaedd70c7e54136ccc31fe78bd31c17996e0647453a6ef```
 
@@ -173,3 +173,6 @@ We can produce the correct crackable hash!
 # Finale
 The only thing remaining is generating a proper wordlist.  Let's go.
 
+Write up thinking about alphabet.  File.
+
+```python2 generate_wordlist.py > wordlists/pw_list.txt```

@@ -10,7 +10,7 @@ We create a new database using password ```Saudi7settle+Strap``` and increase th
 
 We run the python script, remove the database name, and save the hash as hash_test.hash
 
-```$ py keepass2john.py hash_test.kdbx```
+```$ python2 keepass2john.py hash_test.kdbx```
 
 ```$keepass$*2*27648*222*5bad084314051bc38d439d3211317fdba5dca739eac923ccaa2bb21d1de5178f*835ccf2cd3db3874be7d655c1f31887248d2e7025bfd61bb5c19862a0cb0d3d8*9cc0b342fce5cfa55ec830f1443efa69*0fbe057ea7fc655800ab354cbdc3b79eaf1a6eb5fce14312e6ab450bb445d139*f6f984c16ffaedacb2aaedd70c7e54136ccc31fe78bd31c17996e0647453a6ef```
 
