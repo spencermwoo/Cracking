@@ -23,7 +23,7 @@ We then created a basic database with a password from [pwqgen](https://pwqgen.he
 Saudi7settle+Strap
 ```
 
-![alt text](test/test.png)
+![alt text](images/test.png)
 
 And called it test.kdbx.
 
@@ -63,7 +63,7 @@ We ran [hashcat](https://hashcat.net/hashcat/) on our hash file with our diction
 
 Success!
 
-![alt text](test/success.png)
+![alt text](images/test_success.png)
 
 We've successfully put the pieces together to crack a basic .kdbx file!
 
@@ -78,7 +78,7 @@ We have our .kdbx file, so all that's left is a proper wordlist?  Not so fast.
 
 Another difference with a real-world example is the [hash iterations|https://en.wikipedia.org/wiki/Cryptographic_hash_function].  When creating the vault my friend significantly increased the hash iterations such that logging in normally would take about a second each time.  Specifically when creating the vault he used the ```Security > 1 Second Deplay``` option to use a 'deterministicly random' hash iteration count.
 
-![alt text](hash_test/hash_test.png)
+![alt text](images/hash_test.png)
 
 Will our steps for the basic crack work with increased hashes?
 
@@ -97,7 +97,7 @@ We run hashcat with our same [wordlist](https://github.com/spencermwoo/Cracking/
 
 And the list is exhausted.
 
-![alt text](hash_test/failure.png)
+![alt text](images/hash_failure.png)
 
 What!  Our password is in the wordlist, why isn't it found?
 
@@ -123,7 +123,7 @@ We run hashcat again, fingers crossed.
 
 Hashcat runs for a signficiantly longer time...
 
-![alt text](hash_test/success.png)
+![alt text](images/hash_success.png)
 
 Success!
 

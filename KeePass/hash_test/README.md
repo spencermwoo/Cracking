@@ -4,9 +4,9 @@ When creating the keepass vault one can increase the hash iterations.  This tuto
 ### Testing Hash
 We were able to crack a basic vault but will our steps work if we increase the hash iterations?
 
-We create the database using password ```Saudi7settle+Strap``` and increase the iterations.
+We create a new database using password ```Saudi7settle+Strap``` and increase the iterations.
 
-![alt text](hash_test/hash_test.png)
+![alt text](../images/hash_test.png)
 
 We run the python script, remove the database name, and save the hash as hash_test.hash
 
@@ -20,13 +20,13 @@ We run hashcat with our same [wordlist](https://github.com/spencermwoo/Cracking/
 
 And the list is exhausted.
 
-![alt text](hash_test/failure.png)
+![alt text](../images/hash_failure.png)
 
-What!? Our password is in the wordlist, why isn't it found?!  It seems increasing the hash iterations breaks our use case.  Let's find out what's happening!
+What!  Our password is in the wordlist, why isn't it found?
+
+It seems increasing the hash iterations breaks our use case.  Let's find out what's happening!
 
 ### Investigation
-Explain intuition.  Hashes (#todo)
-
 We compare the two hashes
 * Default
 ```$keepass$*2*60000*222*a339edcdaf7d1216d4016b5d80c7e5560e1278f54c963d78cec26c8f388b87ec*f552cf7fd8209a99cdbc957bca9eda067c83d5c8f6bdcd810eb35628661dffa8*4cd47adb5446f6c95eebed4c34128f19*0fab1f230bf8b5b3c32ba5c33ec3cd2501c41dc7d07504651393c596d27f7357*4c7de0a343dfcac9cd62fdec0eb1b4ecc75366f750b0311d3729f4de004f6e91```
@@ -46,7 +46,7 @@ We run hashcat again, fingers crossed.
 
 Hashcat runs for a signficiantly longer time...
 
-![alt text](hash_test/success.png)
+![alt text](../images/hash_success.png)
 
 Success!
 
