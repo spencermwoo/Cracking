@@ -1,5 +1,5 @@
 # Background
-My friend uses [KeePass](https://keepass.info/) as a password manager and unfortunately forgot the master password.  Normally it's a [lost cause](https://superuser.com/a/80380) to brute force however my friend believed they remembered a good chunk of the password.  Instead of having to reset all of his accounts we decided to try our hand at cracking the vault.  This is our attempt.
+My friend uses [KeePass](https://keepass.info/) as a password manager and unfortunately forgot the master password.  Normally it's a [lost cause](https://superuser.com/a/80380) to brute force however my friend remembers a good chunk of his password.  Instead of having to reset all of his accounts we decided to try our hand at cracking the vault.  This is our attempt.
 
 ### Table of Contents
 * [Basic Crack](#basic-crack)
@@ -14,7 +14,7 @@ My friend uses [KeePass](https://keepass.info/) as a password manager and unfort
 
 
 # Basic Crack
-Our first step was to successfully crack a simple vault. If this was possible we had promise in cracking the real thing.
+Our first step was to successfully crack a simple vault.  If this was possible we had promise in cracking the real thing.
 
 ### Setup Vault
 We visited [KeePass downloads](https://keepass.info/download.html) and installed KeePass version 2.38.  
@@ -76,14 +76,14 @@ It turns out the major pieces to crack a KeePass database are
 
 We have our .kdbx file, so all that's left is a proper wordlist?  Not so fast.
 
-Another difference with a real-world example is the hash iterations.  When creating the vault my friend significantly increased the hash iterations such that logging in normally would take about a second each time.  Specifically when creating the vault they used the ```Security > 1 Second Deplay``` option to use a 'deterministicly random' hash iteration count.
+Another difference with a real-world example is the [hash iterations|https://en.wikipedia.org/wiki/Cryptographic_hash_function].  When creating the vault my friend significantly increased the hash iterations such that logging in normally would take about a second each time.  Specifically when creating the vault he used the ```Security > 1 Second Deplay``` option to use a 'deterministicly random' hash iteration count.
 
 ![alt text](hash_test/hash_test.png)
 
 Will our steps for the basic crack work with increased hashes?
 
 ### Testing Hash
-We create the database using password ```Saudi7settle+Strap``` and increase the iterations.
+We create a new database using password ```Saudi7settle+Strap``` and increase the iterations.
 
 We run the python script, remove the database name, and save the hash as hash_test.hash
 
@@ -99,11 +99,11 @@ And the list is exhausted.
 
 ![alt text](hash_test/failure.png)
 
-What!? Our password is in the wordlist, why isn't it found?!  It seems increasing the hash iterations breaks our use case.  Let's find out what's happening!
+What!  Our password is in the wordlist, why isn't it found?
+
+It seems increasing the hash iterations breaks our use case.  Let's find out what's happening!
 
 ### Investigation
-Explain intuition.  Hashes (#todo)
-
 We compare the two hashes
 * Default
 ```$keepass$*2*60000*222*a339edcdaf7d1216d4016b5d80c7e5560e1278f54c963d78cec26c8f388b87ec*f552cf7fd8209a99cdbc957bca9eda067c83d5c8f6bdcd810eb35628661dffa8*4cd47adb5446f6c95eebed4c34128f19*0fab1f230bf8b5b3c32ba5c33ec3cd2501c41dc7d07504651393c596d27f7357*4c7de0a343dfcac9cd62fdec0eb1b4ecc75366f750b0311d3729f4de004f6e91```
@@ -129,9 +129,9 @@ Success!
 
 
 ### Debugging
-We've now determined that the only issue with our process is that the python script incorrectly calculates the ```transformRounds``` value.  If we can properly calculate this value we can successfully attack the real vault!
+We've now determined that if we can properly calculate the ```transformRounds``` value we can successfully attack the real vault!
 
-We play around with different databases with increased hash sizes and note that everytime the ```transformRounds``` value is different.  This is reassuring because it indaicates that our script knows that the keepass.kdbx file's ```transformRounds``` isn't the default ```60000``` and is trying to calculate the proper value.
+We play around with different databases with increased hash sizes and note that everytime the ```transformRounds``` value is different.  This is reassuring because it indicates that our script knows that the keepass.kdbx file's ```transformRounds``` isn't the default ```60000``` and is trying to calculate the proper value.
 
 
 We dive into the python program and look at the code, specifically looking at how [transformRounds is calculated](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py#L101).
@@ -172,3 +172,4 @@ We can produce the correct crackable hash!
 
 # Finale
 The only thing remaining is generating a proper wordlist.  Let's go.
+
