@@ -171,8 +171,14 @@ We run the python file to generate the database hash again
 We can produce the correct crackable hash!
 
 # Finale
-The only thing remaining is generating a proper wordlist.  Let's go.
+The only thing remaining is to generate a proper wordlist.
 
-Write up thinking about alphabet.  File.
+The password was based on a phrase and we believed we knew the first half of the password.  For our example of ```Saudi7settle+Strap``` we might only know ```Saudi7se``` and that there's 10 or so more characters remaining in the phrase.  
+
+Additionally because we knew the base phrase we believed that there was a small alphabet for each character in position.  To explain this consider ```Saudi7settle+Strap```.  If we only know ```Saudi7se``` but believe the next character is based on a ```t``` we felt confident with the posibilities being limited to ```t, T, 7```.  This is a significantly smaller range than all alpanumeric values and special characters.  And this is critical because with our increased hash iterations hashcat is noticeably slower at proceeding through a wordlist and cracking passwords.
+
+We wrote a quick [python script](https://github.com/spencermwoo/Cracking/blob/master/KeePass/generate_wordlist.py) to get the job done.
 
 ```python2 generate_wordlist.py > wordlists/pw_list.txt```
+
+For this example we come up with a [wordlist of 1920 characters](https://github.com/spencermwoo/Cracking/blob/master/KeePass/wordlists/pw_list.txt#L1920)

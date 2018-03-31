@@ -10,6 +10,7 @@ There are four steps to crack a WPA/WPA2 Wi-Fi network.
 For an alternative guide see [brannondorsey's](https://github.com/brannondorsey/wifi-cracking/blob/master/README.md).
 
 ## (1) Monitor Mode 
+[Monitor mode](https://en.wikipedia.org/wiki/Monitor_mode) allows us to monitor traffic from networks which we haven't connected to
 
 List monitor mode compliant interfaces
 
@@ -24,7 +25,9 @@ airmon-ng start wlan0
 ```
 
 ## (2) Target Router
-Using monitor mode we listen for nearby wireless routers.  Make note of your target router's `channel`, `bssid`, and `interface`.
+Using monitor mode we listen for nearby wireless routers.  We detail airodump-ng and airport (only one needed).
+
+Make note of your target router's `channel`, `bssid`, and `interface`.
 
 ### * Airodump-ng (linux)
 Listen to nearby routers
@@ -49,12 +52,11 @@ sudo airport -s
 ```
 
 ## (3) Capture Handshake
+We monitor the router network and wait until we capture a successful handshake.  We detail airodump-ng and wireshark (only one needed).
+
 If you've used airodump-ng above continue using airodump-ng below.  Otherwise follow the wireshark section.
 
-We monitor the router network and wait until we capture a successful handshake.
-
 ### * Airodump-ng
-
 Replace `-c` and `-bssid` values accordingly
 
 Capture beacon frames
@@ -64,7 +66,6 @@ airodump-ng -c 3 --bssid FF:FF:FF:FF:FF:FF -w capture wlan0mon
 ```
 
 ### * Wireshark
-
 Replace `BSSID`, `IFACE`, and `CHANNEL` values accordingly
 
 Disassociate airport
@@ -90,7 +91,11 @@ Merge captured files
 upload both files and images (#todo)
 
 ## (4) Crack Password
-If you don't have a wordlist, download one.  I'm using a wordlist from [berzerk0's Probable Wordlists](https://github.com/berzerk0/Probable-Wordlists/tree/master/Real-Passwords/WPA-Length)
+We've capture a successful handshake.  It's time to crack the password that would give us said successful handshake connection.  We detail aircrack-ng and hashcat (only one needed).
+
+### * Wordlist
+For cracking the password we'll need a wordlist.  I'm using a wordlist from [berzerk0's Probable Wordlists](https://github.com/berzerk0/Probable-Wordlists/tree/master/Real-Passwords/WPA-Length)
+
 ```wget https://raw.githubusercontent.com/berzerk0/Probable-Wordlists/master/Real-Passwords/WPA-Length/Top204Thousand-WPA-probable-v2.txt```
 
 ### * Aircrack-ng
