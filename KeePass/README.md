@@ -80,7 +80,7 @@ Another difference with a real-world example is the [hash iterations](https://en
 
 ![alt text](images/hash_test.png)
 
-Will our steps for the basic crack work with increased hashes?
+Will our steps work with increased hashes?
 
 ### Testing Hash
 We create a new database using password ```Saudi7settle+Strap``` and increase the iterations.
@@ -99,7 +99,7 @@ And the list is exhausted.
 
 ![alt text](images/hash_failure.png)
 
-What!  Our password is in the wordlist, why isn't it found?
+Oh no!  The password is in the wordlist, why isn't it found?
 
 It seems increasing the hash iterations breaks our use case.  Let's find out what's happening!
 
@@ -111,7 +111,7 @@ We compare the two hashes
 * Iterations
 ```$keepass$*2*13056*222*8566bee050e1a69bd90044013c36a76ed0cda2e85133c2f0ea95018cf97a5982*e1bbc858fc6ad4d726e778e1db6dfb6d84143f96be51f387ba89610c4c1cefe7*7ceed46e2420ec4c68a1d6cc8bb872ec*7bc6c7a6398e3d7ad472fc9afedb58578ccf04d9e7d03eda3d20a9d02e1932a2*fbbf4725cf5bc99b928ad2cbddef00d4a20ef4a73bf56ba5a68ba31047ed440b```
 
-We note that the third parameter (asterisk-delimited) has changed and seems to relate to the hash iterations.  This is confirmed when we view the code and see that the third parameter output is [transformRounds](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py#L114).  We conjecture that this transform rounds should be our ```17052416``` value from using the 1 Second Delay and our basic crack worked because ```60000``` is the default transformRounds.
+We note that the third parameter (asterisk-delimited) has changed and seems to relate to the hash iterations.  We confirm this by looking at the code and indeed the third parameter is [transformRounds](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py#L114).  We conjecture that this transform rounds should be our ```17052416``` value from using the 1 Second Delay and our basic crack worked because ```60000``` is the default transformRounds.
 
 We test this hypothesis by manually replacing the transformRounds value with our expected value in our hash file.
 
@@ -129,9 +129,9 @@ Success!
 
 
 ### Debugging
-We've now determined that if we can properly calculate the ```transformRounds``` value we can successfully attack the real vault!
+We've now determined that if we can properly calculate the ```transformRounds``` value we can successfully attack the real vault however our program isn't properly calculating this value.
 
-We play around with different databases with increased hash sizes and note that everytime the ```transformRounds``` value is different.  This is reassuring because it indicates that our script knows that the keepass.kdbx file's ```transformRounds``` isn't the default ```60000``` and is trying to calculate the proper value.
+We play around with different databases with increased hash sizes and note that everytime the ```transformRounds``` value is different.  This is reassuring because it indicates that our script knows that the keepass.kdbx file's ```transformRounds``` is changing and isn't the default ```60000``` and is trying to calculate the correct number.
 
 
 We dive into the python program and look at the code, specifically looking at how [transformRounds is calculated](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py#L101).
@@ -173,12 +173,12 @@ We can produce the correct crackable hash!
 # Finale
 The only thing remaining is to generate a proper wordlist.
 
-The password was based on a phrase and we believed we knew the first half of the password.  For our example of ```Saudi7settle+Strap``` we might only know ```Saudi7se``` and that there's 10 or so more characters remaining in the phrase.  
+My friend's password was based on a phrase and he was confident in knowing the first half of the password.  For our example of ```Saudi7settle+Strap``` we might only know ```Saudi7se``` and that there's 10 or so more characters remaining in the phrase.  
 
-Additionally because we knew the base phrase we believed that there was a small alphabet for each character in position.  To explain this consider ```Saudi7settle+Strap```.  If we only know ```Saudi7se``` but believe the next character is based on a ```t``` we felt confident with the posibilities being limited to ```t, T, 7```.  This is a significantly smaller range than all alpanumeric values and special characters.  And this is critical because with our increased hash iterations hashcat is noticeably slower at proceeding through a wordlist and cracking passwords.
+Additionally because we knew the base phrase we believed that there was a small alphabet for each character in position.  For example consider ```Saudi7settle+Strap```.  If we only know ```Saudi7se``` but believe the next character is based on a ```t``` we felt confident with the possibilities being limited to ```t, T, 7```.  This is a significantly smaller range than all alpanumeric values and special characters.  Therefore while the password is long, the alphabet for each character space isn't too large.  And this is critical because with our increased hash iterations hashcat is noticeably slower at proceeding through a wordlist and cracking passwords.
 
 We wrote a quick [python script](https://github.com/spencermwoo/Cracking/blob/master/KeePass/generate_wordlist.py) to get the job done.
 
 ```python2 generate_wordlist.py > wordlists/pw_list.txt```
 
-For this example we come up with a [wordlist of 1920 characters](https://github.com/spencermwoo/Cracking/blob/master/KeePass/wordlists/pw_list.txt#L1920)
+For this example we come up with a [wordlist of 1920 characters](https://github.com/spencermwoo/Cracking/blob/master/KeePass/wordlists/pw_list.txt#L1920).

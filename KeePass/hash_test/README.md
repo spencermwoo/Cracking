@@ -34,7 +34,7 @@ We compare the two hashes
 * Iterations
 ```$keepass$*2*13056*222*8566bee050e1a69bd90044013c36a76ed0cda2e85133c2f0ea95018cf97a5982*e1bbc858fc6ad4d726e778e1db6dfb6d84143f96be51f387ba89610c4c1cefe7*7ceed46e2420ec4c68a1d6cc8bb872ec*7bc6c7a6398e3d7ad472fc9afedb58578ccf04d9e7d03eda3d20a9d02e1932a2*fbbf4725cf5bc99b928ad2cbddef00d4a20ef4a73bf56ba5a68ba31047ed440b```
 
-We note that the third parameter (asterisk-delimited) has changed and seems to relate to the hash iterations.  This is confirmed when we view the code and see that the third parameter output is [transformRounds](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py#L114).  We conjecture that this transform rounds should be our ```17052416``` value from using the 1 Second Delay and our basic crack worked because ```60000``` is the default transformRounds.
+We note that the third parameter (asterisk-delimited) has changed and seems to relate to the hash iterations.  We confirm this by looking at the code and indeed the third parameter is [transformRounds](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py#L114).  We conjecture that this transform rounds should be our ```17052416``` value from using the 1 Second Delay and our basic crack worked because ```60000``` is the default transformRounds.
 
 We test this hypothesis by manually replacing the transformRounds value with our expected value in our hash file.
 
@@ -52,9 +52,9 @@ Success!
 
 
 ### Debugging
-We've now determined that the only issue with our process is that the python script incorrectly calculates the ```transformRounds``` value.  If we can properly calculate this value we can successfully attack the real vault!
+We've now determined that if we can properly calculate the ```transformRounds``` value we can successfully attack the real vault however our program isn't properly calculating this value.
 
-We play around with different databases with increased hash sizes and note that everytime the ```transformRounds``` value is different.  This is reassuring because it indaicates that our script knows that the keepass.kdbx file's ```transformRounds``` isn't the default ```60000``` and is trying to calculate the proper value.
+We play around with different databases with increased hash sizes and note that everytime the ```transformRounds``` value is different.  This is reassuring because it indicates that our script knows that the keepass.kdbx file's ```transformRounds``` is changing and isn't the default ```60000``` and is trying to calculate the correct number.
 
 
 We dive into the python program and look at the code, specifically looking at how [transformRounds is calculated](https://github.com/spencermwoo/Cracking/blob/master/KeePass/test/keepass2john.py#L101).
