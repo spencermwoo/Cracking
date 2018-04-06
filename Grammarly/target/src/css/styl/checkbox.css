@@ -1,0 +1,50 @@
+._a7c193-select_checkbox {
+  cursor: pointer;
+  display: block;
+}
+
+._a7c193-select_checkbox ._a7c193-checkbox {
+  display: none;
+}
+
+._a7c193-select_checkbox input:checked ~ ._a7c193-checkbox_check {
+  background: #28b473 !important;
+  border: none;
+  transition: 0.3s background;
+}
+
+._a7c193-select_checkbox input:checked ~ ._a7c193-checkbox_check ._a7c193-checkbox_check_round {
+  background: #fff !important;
+  width: 16px;
+  height: 16px;
+  left: 24px;
+  top: 2px;
+  transition: 0.2s left, 0.2s background, 0.2s border;
+}
+
+._a7c193-select_checkbox ._a7c193-checkbox_check {
+  border-radius: 20px;
+  background: #acacae !important;
+  height: 20px;
+  width: 42px;
+  border: 1px solid #acacae;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-top: 2px;
+  transition: 0.2s background;
+  position: absolute;
+  top: 0px;
+  right: 33px;
+}
+
+._a7c193-select_checkbox ._a7c193-checkbox_check_round {
+  left: 1px;
+  top: 1px;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 19px;
+  background: #fff !important;
+  display: inline-block;
+  transition: 0.2s left, 0.2s background;
+}

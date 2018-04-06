@@ -1,0 +1,31 @@
+._5f9912-loginSuccess {
+  height: 390px !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  font-size: 27px !important;
+  font-weight: 300 !important;
+  font-family: "SF UI Text", system, -apple-system, ".SFNSDisplay-Regular", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+}
+
+._5f9912-loginSuccess._5f9912-windows {
+  font-weight: 400 !important;
+}
+
+._5f9912-loginSuccess:before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 128px;
+  height: 127px;
+  background-size: 128px 127px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='128' height='127' viewBox='0 0 128 127' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CradialGradient fx='50%' fy='50%' r='48.896%' id='a'%3E%3Cstop stop-color='%23F5EF70' offset='0%'/%3E%3Cstop stop-color='%23FFF' offset='100%'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(.152 .866)'%3E%3Cellipse opacity='.5' fill='url(%23a)' cx='63.783' cy='62.634' rx='62.634' ry='62.634'/%3E%3Cellipse fill='%23FFF' cx='64.357' cy='63.208' rx='32.179' ry='32.179'/%3E%3Cpath d='M10.343 32.18c0 5.71 4.63 10.342 10.343 10.342-5.712 0-10.343 4.63-10.343 10.343 0-5.713-4.63-10.343-10.343-10.343 5.713 0 10.343-4.63 10.343-10.343zM117.797 81.596c0 5.395 4.373 9.768 9.77 9.768-5.397 0-9.77 4.374-9.77 9.77 0-5.396-4.373-9.77-9.77-9.77 5.397 0 9.77-4.373 9.77-9.768zM110.9 36.776c0 4.125 3.346 7.47 7.47 7.47-4.124 0-7.47 3.344-7.47 7.47 0-4.126-3.343-7.47-7.47-7.47 4.127 0 7.47-3.345 7.47-7.47zM21.26 83.894c0 4.126 3.345 7.47 7.47 7.47-4.125 0-7.47 3.345-7.47 7.47 0-4.125-3.343-7.47-7.47-7.47 4.127 0 7.47-3.344 7.47-7.47z' fill='%23F5EF70'/%3E%3Cpath d='M63.775 29.654c-18.668 0-33.8 15.133-33.8 33.802 0 18.667 15.132 33.8 33.8 33.8 18.667 0 33.8-15.133 33.8-33.8 0-18.67-15.133-33.802-33.8-33.802zm0 64.9c-17.148 0-31.097-13.953-31.097-31.098 0-17.147 13.95-31.097 31.097-31.097 17.148 0 31.097 13.95 31.097 31.096 0 17.145-13.95 31.097-31.097 31.097z' fill='%2328B473'/%3E%3C/g%3E%3Cpath d='M49.5 67.5l9.513 9.513L82.256 53.77' stroke='%2328B473' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  margin-top: 90px !important;
+}
+
+._5f9912-loginSuccess ._5f9912-name {
+  white-space: nowrap !important;
+}
+
+._5f9912-loginSuccess ._5f9912-label {
+  text-align: center !important;
+}

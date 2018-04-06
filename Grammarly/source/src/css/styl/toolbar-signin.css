@@ -1,0 +1,8 @@
+.gr-toolbar-signin {
+  display: block;
+  width: 347px;
+  height: 335px;
+  border: 0;
+  opacity: 0;
+  transition: 0.2s opacity;
+}

@@ -1,0 +1,114 @@
+._eb0767-signin {
+  font-family: 'Lato';
+  width: 348px;
+}
+
+._eb0767-signin * {
+  box-sizing: border-box;
+}
+
+._eb0767-signin a {
+  text-decoration: none;
+  transition: color 0.1s linear;
+}
+
+._eb0767-signin a:hover {
+  color: #676769;
+}
+
+._eb0767-signin ._eb0767-banner {
+  background: #d7f7e8;
+  font-size: 15px;
+  color: #1ba163;
+  line-height: 24px;
+  padding: 18px 65px;
+  position: relative;
+}
+
+._eb0767-signin ._eb0767-banner:before {
+  content: '';
+  position: absolute;
+  margin-left: -31px;
+  margin-top: 5px;
+  width: 24px;
+  height: 40px;
+  background-size: 24px 40px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='40' viewBox='0 0 24 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EFill 77%3C/title%3E%3Cpath d='M14.966 4.61l-1.67 13.66h7.394L8.344 34.54l1.67-13.66H2.62L14.966 4.61M16.836 0L0 22.186h8.55L6.475 39.152 23.31 16.966h-8.55L16.835 0' fill='%2328B473' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+._eb0767-signin ._eb0767-descr {
+  padding: 20px 32px 10px;
+}
+
+._eb0767-signin ._eb0767-descr_title {
+  font-size: 15px;
+  color: #5a5b5f;
+  line-height: 20px;
+  margin-bottom: 7px;
+}
+
+._eb0767-signin ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+._eb0767-signin li {
+  margin-bottom: 3px;
+  font-size: 13px;
+  color: #acacae;
+  line-height: 18px;
+}
+
+._eb0767-signin li:before {
+  content: '• ';
+}
+
+._eb0767-signin ._eb0767-buttons {
+  padding-left: 20px;
+  margin-bottom: 18px;
+  position: relative;
+  top: 1px;
+}
+
+._eb0767-signin ._eb0767-button {
+  border-radius: 26px;
+  padding: 3px 22px;
+  margin-left: 14px;
+  font-size: 11px;
+  transition: all 0.1s linear;
+}
+
+._eb0767-signin ._eb0767-auth_button {
+  background-color: #e75146;
+  color: #fff;
+  border: 1px solid #e75146;
+}
+
+._eb0767-signin ._eb0767-auth_button ._eb0767-sign_up {
+  text-transform: uppercase;
+  letter-spacing: 0.92px;
+  margin-right: 3px;
+}
+
+._eb0767-signin ._eb0767-auth_button ._eb0767-free {
+  color: #ffb9b9;
+}
+
+._eb0767-signin ._eb0767-auth_button:hover {
+  color: #fff;
+  background-color: #d5281c;
+  border-color: #d5281c;
+}
+
+._eb0767-signin ._eb0767-footer {
+  color: #acacae;
+  font-size: 12px;
+  padding-left: 35px;
+  padding-bottom: 15px;
+}
+
+._eb0767-signin ._eb0767-signin_link {
+  color: #acacae;
+}

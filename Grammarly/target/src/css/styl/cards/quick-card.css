@@ -1,0 +1,176 @@
+._faf37e-container {
+  font-family: "Helvetica Neue", Lato;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 4px 8px 0 rgba(75,85,100,0.1);
+  border: 1px solid rgba(175,185,200,0.15);
+  border-radius: 0px 3px 3px 3px;
+  overflow: hidden;
+  min-width: 180px;
+  margin-top: 3px;
+  z-index: 2147483647;
+}
+
+._faf37e-container._faf37e-flip {
+  transform: translateY(-100%);
+  border-radius: 3px 3px 3px 0px;
+  margin-top: -3px;
+}
+
+._faf37e-container._faf37e-flip ._faf37e-actions {
+  border-bottom: 1px solid rgba(74,74,74,0.1);
+}
+
+._faf37e-actions {
+  height: 35px;
+  padding: 0 10px;
+  line-height: 35px;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  color: #4b5564;
+}
+
+._faf37e-actions ._faf37e-ignore,
+._faf37e-actions ._faf37e-details {
+  cursor: pointer;
+  height: 100%;
+  opacity: 0.69;
+}
+
+._faf37e-actions ._faf37e-ignore:hover,
+._faf37e-actions ._faf37e-details:hover {
+  opacity: 1;
+}
+
+._faf37e-actions ._faf37e-ignore {
+  float: left;
+}
+
+._faf37e-actions ._faf37e-details {
+  float: right;
+}
+
+._faf37e-actions ._faf37e-details::after {
+  content: '';
+  width: 18px;
+  height: 100%;
+  display: inline-block;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-image: url("data:image/svg+xml;utf,%3Csvg%20width=%2222%22%20height=%2222%22%20viewBox=%220%200%2022%2022%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill=%22none%22%20fill-rule=%22evenodd%22%3E%3Cpath%20d=%22M10.97%200C4.912%200%200%204.91%200%2010.968s4.912%2010.97%2010.97%2010.97c6.06%200%2010.97-4.912%2010.97-10.97C21.94%204.91%2017.03%200%2010.97%200%22%20fill=%22#28B473%22/%3E%3Cpath%20d=%22M17.133%2016.713c0%20.456-.385.816-.857.73-.36-.064-.58-.402-.58-.766v-.707l.125-.782a6.396%206.396%200%200%201-4.856%202.206c-3.684%200-6.65-3.05-6.437-6.782.185-3.21%202.78-5.866%205.986-6.08%202.464-.166%204.652%201.077%205.87%202.922h-.004c.192.41.104.786-.217%201.01a.742.742%200%200%201-1.035-.182v-.008c-.882-1.23-2.42-2.267-4.172-2.267-3.363%200-5.944%203.37-4.588%206.905.597%201.556%202.012%202.67%203.66%202.928%202.023.318%203.874-.378%204.94-1.942l-.666.117h-1.15c-.364%200-.702-.22-.767-.58-.085-.47.275-.855.73-.855h4.018v4.133%22%20fill=%22#FFF%22/%3E%3C/g%3E%3C/svg%3E");
+  margin-left: 5px;
+  margin-top: -1px;
+  float: right;
+}
+
+._faf37e-replacements,
+._faf37e-addToDict {
+  font-size: 14px !important;
+  display: inline-block;
+  letter-spacing: 0.2px;
+  width: 100%;
+  line-height: 35px;
+}
+
+._faf37e-replacements._faf37e-didYouMean ._faf37e-replacement:first-child {
+  padding-top: 18px;
+  position: relative;
+}
+
+._faf37e-replacements._faf37e-didYouMean ._faf37e-replacement:first-child::before {
+  content: 'Did you mean:';
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  display: inline-block;
+  opacity: 0.6;
+  font-size: 12px;
+  line-height: 20px;
+  font-style: italic;
+  color: #4b5564;
+}
+
+._faf37e-replacement,
+._faf37e-addToDict {
+  box-sizing: content-box;
+  height: 35px;
+  cursor: pointer;
+  padding: 0 10px;
+  border-bottom: 1px solid rgba(74,74,74,0.1);
+}
+
+._faf37e-replacement:hover,
+._faf37e-addToDict:hover {
+  background: rgba(40,180,115,0.15);
+}
+
+._faf37e-replacement {
+  font-weight: 500;
+}
+
+._faf37e-addToDict {
+  opacity: 0.6;
+  font-size: 12px;
+  color: #4b5564;
+}
+
+._faf37e-addToDict:hover {
+  opacity: 1;
+}
+
+._faf37e-insert {
+  color: #199b5f;
+}
+
+._faf37e-delete {
+  color: #f72727;
+}
+
+._faf37e-insert,
+._faf37e-delete {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+._faf37e-word {
+  text-decoration: none;
+  color: #9b9b9b;
+}
+
+._faf37e-delPart {
+  text-decoration: line-through;
+}
+
+._faf37e-insPunc {
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+}
+
+._faf37e-insPunc:after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 180%;
+  background-color: #199b5f;
+  transform: translateX(-25%);
+  top: 27px;
+  left: 0;
+}
+
+._faf37e-delPunc {
+  text-decoration: none;
+  position: relative;
+}
+
+._faf37e-delPunc:after {
+  background: rgba(255,0,30,0.5);
+  content: '';
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  top: 4px;
+  left: 1px;
+  transform: rotate(45deg);
+}

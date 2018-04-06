@@ -1,0 +1,595 @@
+._c4f153-container {
+  position: absolute;
+  min-width: 180px !important;
+  margin-top: 3px;
+  margin-left: -16px !important;
+  z-index: 2147483647;
+}
+
+._c4f153-container._c4f153-flip {
+  transform: translateY(-100%);
+  margin-top: 1px !important;
+}
+
+._c4f153-container._c4f153-flipSyn {
+  margin-top: -10px !important;
+}
+
+._c4f153-card {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Helvetica, Arial, sans-serif !important;
+  font-size: 10px !important;
+  color: #9399a7 !important;
+  background: #fff !important;
+  border-radius: 4px !important;
+  min-width: 192px;
+  max-width: 288px;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0 0 1px 0 rgba(76,85,101,0.2), 0 2px 7px 0 rgba(76,85,101,0.2) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+._c4f153-card:before {
+  content: "";
+  position: absolute;
+  border: 1px solid transparent;
+  width: 100%;
+  height: 2px;
+  margin-top: -2px !important;
+}
+
+._c4f153-bigTitle {
+  font-size: 1.4em !important;
+  padding: 10px 16px 9px !important;
+  line-height: 1.4em !important;
+  color: #4c5565 !important;
+}
+
+._c4f153-unknownWordTitle {
+  font-size: 1.2em !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  padding-top: 6px !important;
+  color: #fc5454 !important;
+  line-height: 2.5em !important;
+  white-space: nowrap !important;
+}
+
+._c4f153-unknownWordTitle + ._c4f153-btnDictLabelWithIcon {
+  top: -2px !important;
+  position: relative !important;
+}
+
+._c4f153-bigTitle:first-letter,
+._c4f153-unknownWordTitle:first-letter {
+  text-transform: capitalize !important;
+}
+
+._c4f153-explanation {
+  padding: 0 16px !important;
+  font-size: 1.1em !important;
+  line-height: 1.6em !important;
+  margin-bottom: 1em !important;
+}
+
+._c4f153-explanation b {
+  font-weight: 600 !important;
+  padding: 2px 4px !important;
+  border-radius: 2px !important;
+  background: #f6f6fa !important;
+  color: #4c5565 !important;
+}
+
+._c4f153-maxWidthReached ._c4f153-replacement ._c4f153-item {
+  white-space: normal !important;
+  line-height: 2em !important;
+  padding-bottom: 5px !important;
+}
+
+._c4f153-item {
+  line-height: 2.8em !important;
+  white-space: nowrap !important;
+  padding: 0 16px !important;
+  position: relative !important;
+}
+
+._c4f153-item:hover {
+  cursor: pointer;
+  background: #15c49a !important;
+  color: #fff !important;
+}
+
+._c4f153-item:hover * {
+  color: #fff !important;
+}
+
+._c4f153-item:hover *:after {
+  background: #fff;
+}
+
+._c4f153-item:hover ._c4f153-logoIcon circle {
+  fill: #fff;
+}
+
+._c4f153-item:hover ._c4f153-logoIcon path {
+  fill: #00ae84;
+}
+
+._c4f153-item:hover ._c4f153-ignoreIcon path,
+._c4f153-item:hover ._c4f153-undoIcon path,
+._c4f153-item:hover ._c4f153-ignoreIcon polygon,
+._c4f153-item:hover ._c4f153-undoIcon polygon,
+._c4f153-item:hover ._c4f153-ignoreIcon use,
+._c4f153-item:hover ._c4f153-undoIcon use {
+  stroke: #fff;
+}
+
+._c4f153-item:hover ._c4f153-ignoreIcon mask[data-mask-color="d70af4_ignoreIcon"] {
+  fill: transparent;
+}
+
+._c4f153-item:hover ._c4f153-ignoreIcon use[data-fix="d70af4_ignoreIcon"] {
+  stroke: transparent;
+  stroke-width: 1.2;
+}
+
+._c4f153-item:hover ._c4f153-dictionaryIcon use {
+  stroke: #fff;
+}
+
+._c4f153-item:hover ._c4f153-wikiIcon g {
+  stroke: #fff;
+}
+
+._c4f153-item:hover ._c4f153-wikiIcon path {
+  fill: #fff;
+}
+
+._c4f153-btnDictLabelWithIcon {
+  display: inline !important;
+  padding-left: 25px !important;
+  font-weight: 500 !important;
+  font-size: 10px !important;
+  color: #9399a7 !important;
+}
+
+._c4f153-replacement {
+  margin-bottom: 7px !important;
+}
+
+._c4f153-footer {
+  line-height: initial;
+  white-space: normal;
+  text-align: left;
+  float: initial;
+  clear: none;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: transparent;
+  box-shadow: none;
+  background-image: none;
+  background-position: 0% 0%;
+  background-size: auto auto;
+  background-repeat: repeat;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-attachment: scroll;
+  background-color: transparent;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  visibility: visible;
+  position: static;
+  overflow: visible;
+  opacity: 1;
+  text-align: inherit;
+  text-shadow: none;
+  widows: 0;
+  height: auto;
+  width: auto;
+  min-width: auto;
+  max-width: auto;
+  max-height: auto;
+  max-height: auto;
+  white-space: normal;
+  word-spacing: normal;
+  z-index: auto;
+  color: transparent;
+}
+
+._c4f153-footer div,
+._c4f153-footer span,
+._c4f153-footer h1,
+._c4f153-footer h2,
+._c4f153-footer h3,
+._c4f153-footer h4,
+._c4f153-footer h5,
+._c4f153-footer h6,
+._c4f153-footer p,
+._c4f153-footer a,
+._c4f153-footer a[href],
+._c4f153-footer img,
+._c4f153-footer b,
+._c4f153-footer u,
+._c4f153-footer i,
+._c4f153-footer ul,
+._c4f153-footer li,
+._c4f153-footer form,
+._c4f153-footer label,
+._c4f153-footer canvas,
+._c4f153-footer footer,
+._c4f153-footer header,
+._c4f153-footer nav,
+._c4f153-footer section,
+._c4f153-footer input[type="date"],
+._c4f153-footer input[type="email"],
+._c4f153-footer input[type="number"],
+._c4f153-footer input[type="password"],
+._c4f153-footer input[type="search"],
+._c4f153-footer input[type="tel"],
+._c4f153-footer input[type="text"],
+._c4f153-footer input[type="url"],
+._c4f153-footer button,
+._c4f153-footer button[type="button"],
+._c4f153-footer button[type="submit"],
+._c4f153-footer [role=button],
+._c4f153-footer [type=button],
+._c4f153-footer [type=submit] {
+  line-height: initial;
+  white-space: normal;
+  text-align: left;
+  float: initial;
+  clear: none;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: transparent;
+  box-shadow: none;
+  background-image: none;
+  background-position: 0% 0%;
+  background-size: auto auto;
+  background-repeat: repeat;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-attachment: scroll;
+  background-color: transparent;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  visibility: visible;
+  position: static;
+  overflow: visible;
+  opacity: 1;
+  text-align: inherit;
+  text-shadow: none;
+  widows: 0;
+  height: auto;
+  width: auto;
+  min-width: auto;
+  max-width: auto;
+  max-height: auto;
+  max-height: auto;
+  white-space: normal;
+  word-spacing: normal;
+  z-index: auto;
+}
+
+._c4f153-footer span {
+  display: inline;
+}
+
+._c4f153-footer ._c4f153-item {
+  line-height: 3em !important;
+  height: auto !important;
+  width: 100% !important;
+}
+
+._c4f153-footerButton {
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  font-weight: 500 !important;
+  font-size: 10px !important;
+  color: #9399a7 !important;
+}
+
+._c4f153-btnIgnore {
+  padding-left: 40px !important;
+}
+
+._c4f153-icon {
+  position: relative !important;
+}
+
+._c4f153-dictionaryIcon {
+  position: absolute !important;
+  margin-left: -34px !important;
+  margin-top: -1px !important;
+}
+
+._c4f153-ignoreIcon {
+  position: absolute !important;
+  top: -1px !important;
+  margin-left: -34px !important;
+}
+
+._c4f153-ignoreIcon use[data-fix="d70af4_ignoreIcon"] {
+  stroke-width: 2.4;
+}
+
+._c4f153-ignoreIcon mask[data-mask-color="d70af4_ignoreIcon"] {
+  fill: #fff;
+}
+
+._c4f153-logoIcon {
+  top: 5px !important;
+  margin-right: 6px !important;
+  margin-left: -3px !important;
+}
+
+._c4f153-item._c4f153-btnLogo {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  line-height: 3.2em !important;
+}
+
+._c4f153-btnPersonalize {
+  background: #fff5c9 !important;
+  padding-bottom: 3px !important;
+}
+
+._c4f153-personalizeMessage {
+  text-transform: none !important;
+  line-height: 1.6em !important;
+  font-size: 10px !important;
+  white-space: normal !important;
+  color: #9399a7 !important;
+  padding-top: 14px !important;
+  padding-bottom: 4px !important;
+}
+
+._c4f153-attn {
+  font-weight: bold !important;
+  font-weight: bold !important;
+  font-size: 10px !important;
+  text-transform: none !important;
+  color: #9399a7 !important;
+  line-height: 1.6em !important;
+  white-space: normal !important;
+}
+
+._c4f153-cardAddedToDict {
+  color: #4c5565 !important;
+}
+
+._c4f153-addedToDictTitle {
+  font-size: 1.4em !important;
+  line-height: 1.5em !important;
+  padding-left: 40px !important;
+  padding-top: 15px !important;
+  font-weight: 500 !important;
+}
+
+._c4f153-dictionaryDescription {
+  padding-left: 40px !important;
+  line-height: 1.5em !important;
+  padding-bottom: 11px !important;
+  font-size: 1.1em !important;
+}
+
+._c4f153-undo {
+  padding-top: 9px !important;
+  padding-bottom: 5px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  padding-left: 40px !important;
+}
+
+._c4f153-dictLink {
+  color: #15c49a !important;
+  cursor: pointer !important;
+}
+
+._c4f153-dictLink:hover {
+  color: #109374 !important;
+}
+
+._c4f153-dictionaryAddedIcon {
+  padding-left: 5px !important;
+  position: absolute !important;
+  margin-left: -30px !important;
+  margin-top: 5px !important;
+}
+
+._c4f153-undoIcon {
+  padding-left: 5px !important;
+  position: absolute !important;
+  margin-left: -40px !important;
+  margin-top: -3px !important;
+}
+
+._c4f153-synTitle {
+  font-size: 1.2em !important;
+  color: #9399a7 !important;
+  line-height: 3.2em !important;
+  padding-left: 16px !important;
+  padding-bottom: 7px !important;
+  font-weight: 500 !important;
+}
+
+._c4f153-synList {
+  padding-left: 16px !important;
+  padding-right: 10px !important;
+}
+
+._c4f153-synListSingle {
+  padding-left: 5px !important;
+  margin-top: -10px !important;
+  margin-bottom: -5px !important;
+}
+
+._c4f153-synListTitle {
+  font-size: 1.1em !important;
+  line-height: 2em !important;
+  position: relative !important;
+  color: #4c5565 !important;
+}
+
+._c4f153-synListNumber {
+  color: #b7bbc5 !important;
+  margin-right: 8px !important;
+}
+
+._c4f153-synSubitems {
+  padding-left: 6px !important;
+  padding-bottom: 17px !important;
+}
+
+._c4f153-synItem {
+  border-radius: 4px !important;
+  padding: 0 10px !important;
+  cursor: pointer !important;
+  z-index: 1000 !important;
+  position: relative !important;
+}
+
+._c4f153-synItem:hover {
+  background: #15c49a !important;
+  color: #fff !important;
+}
+
+._c4f153-synItem:hover * {
+  color: #fff !important;
+}
+
+._c4f153-dict {
+  width: 272px !important;
+  outline: none !important;
+}
+
+._c4f153-dict ._c4f153-footer {
+  font-size: 1.1em !important;
+  font-weight: 500 !important;
+}
+
+._c4f153-dict._c4f153-flip {
+  margin-top: -6px !important;
+}
+
+._c4f153-dictContent {
+  color: #5e6878 !important;
+  padding: 14px 16px 9px !important;
+  font-size: 1.2em !important;
+  line-height: 1.6em !important;
+}
+
+._c4f153-dictItemCounter {
+  margin-left: -13px !important;
+  margin-right: 2px !important;
+}
+
+._c4f153-dictItem {
+  padding-left: 13px !important;
+  padding-bottom: 10px !important;
+  line-height: 15px !important;
+  color: #5e6878 !important;
+}
+
+._c4f153-qualifier {
+  color: #b7bbc5 !important;
+}
+
+._c4f153-dict a {
+  text-decoration: none !important;
+  color: #9399a7 !important;
+  letter-spacing: 0.3px !important;
+  outline: none !important;
+  text-transform: uppercase !important;
+}
+
+._c4f153-footer ._c4f153-dictFooterItem {
+  pointer-events: none !important;
+  color: #c9cbd5 !important;
+  font-size: 11px !important;
+}
+
+._c4f153-footer ._c4f153-wikiIcon {
+  top: 0 !important;
+  margin-right: 6px !important;
+  margin-left: -34px !important;
+  position: absolute !important;
+}
+
+._c4f153-footer ._c4f153-wikiLink {
+  display: inline-block !important;
+  font-size: 10px !important;
+  vertical-align: top !important;
+  margin-top: 10px !important;
+}
+
+._c4f153-footer ._c4f153-wiki {
+  position: relative !important;
+  height: 32px !important;
+  line-height: 32px !important;
+}
+
+._c4f153-footer ._c4f153-wiki a {
+  padding-left: 24px !important;
+}
+
+/* wapCss.ignore.start */
+
+.gr__tooltip.gr-notfound-tooltip.gr__tooltip_empty {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, Helvetica, Arial, sans-serif !important;
+  font-size: 10px !important;
+  color: #9399a7 !important;
+  background: #fff !important;
+  border-radius: 4px !important;
+  min-width: 192px;
+  max-width: 288px;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0 0 1px 0 rgba(76,85,101,0.2), 0 2px 7px 0 rgba(76,85,101,0.2) !important;
+  -webkit-font-smoothing: antialiased;
+  min-width: 176px !important;
+  margin-top: -16px !important;
+}
+
+.gr__tooltip.gr-notfound-tooltip.gr__tooltip_empty:before {
+  background-color: #fff !important;
+  font-size: 11px !important;
+  color: #7c8495 !important;
+  line-height: 16px;
+  margin-left: 22px !important;
+}
+
+.gr__tooltip.gr-notfound-tooltip.gr__tooltip_empty .gr__tooltip-content {
+  background: #fff !important;
+  display: none !important;
+}
+
+.gr__tooltip.gr-notfound-tooltip.gr__tooltip_empty .gr__tooltip-logo {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cg fill='none' fill-rule='evenodd' transform='translate(-1 -1)'%3E%3Ccircle cx='10' cy='10' r='9.008' fill='%2300AE84'/%3E%3Cpath fill='%23FFF' d='M11.318 11.843c.052.297.335.504.64.504h.963l.56-.074c-.895 1.297-2.438 1.897-4.13 1.638-1.38-.214-2.566-1.14-3.065-2.437-1.134-2.942 1.03-5.75 3.84-5.75 1.468 0 2.75.852 3.49 1.882.193.304.58.385.864.185.267-.185.342-.533.178-.815-1.014-1.578-2.84-2.593-4.906-2.46-2.677.193-4.854 2.37-5.003 5.04-.18 3.103 2.295 5.637 5.382 5.637 1.618 0 3.065-.703 4.056-1.837l-.12.652v.585c0 .304.21.586.508.637.395.074.738-.23.738-.608v-3.52H11.93c-.38.008-.687.35-.612.74z'/%3E%3C/g%3E%3C/svg%3E") !important;
+  background-size: 18px !important;
+  display: inline-block !important;
+  height: 18px;
+  width: 18px;
+  top: 15px !important;
+  left: 13px !important;
+}
+
+.gr__tooltip.gr-notfound-tooltip.gr__tooltip_empty.gr__flipped {
+  margin-top: 6px !important;
+}
+
+/* wapCss.ignore.end */

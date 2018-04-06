@@ -1,0 +1,98 @@
+.gr-disable-scroll {
+  overflow: hidden;
+}
+.gr-_signin {
+  overflow-y: auto;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: Arial;
+  color: #000;
+  background: rgba(0,0,0,0.7) !important;
+  z-index: 2147483647;
+  display: none;
+  transition: opacity 0.3s ease-in;
+  transform: translateZ(0);
+}
+.gr-_signin.gr-_show {
+  display: block !important;
+}
+.gr-_signin .gr-_dialog-content {
+  background: #fff !important;
+  position: fixed;
+  z-index: 2147483647;
+  border: 0;
+  box-shadow: 0 10px 50px 0px rgba(0,0,0,0.6);
+}
+.gr-_signin .gr-_dialog-content {
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  margin-top: 0;
+}
+html[data-type="freemium-plus"] .gr_-editor-logo::after {
+  content: 'premium';
+  display: inline-block;
+  line-height: 12px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1px 5px 0 4px;
+  border-radius: 2px;
+  color: #fff;
+  border: 1px solid #4585f3;
+  background-color: #4585f3 !important;
+  background: linear-gradient('to top', #4585f3 0%, #4585f3 100%), linear-gradient('to top', rgba(1,1,1,0.15) 0%, rgba(255,255,255,0.15) 100%) !important;
+  position: absolute;
+  left: 100%;
+  margin-left: 9px;
+  top: 3px;
+  font-size: 12px;
+  padding: 2px 4px 0;
+  line-height: 14px;
+}
+.gr-freemium-ifr {
+  border-radius: 8px;
+}
+.gr_-editor {
+  overflow-y: auto;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: Arial;
+  color: #000;
+  background: rgba(0,0,0,0.7) !important;
+  z-index: 2147483647;
+  display: none;
+  transition: opacity 0.3s ease-in;
+  transform: translateZ(0);
+  background: rgba(0,0,0,0.5) !important;
+  will-change: opacity;
+}
+.gr_-editor.gr-_show {
+  display: block !important;
+}
+.gr_-editor .gr-_dialog-content {
+  background: #fff !important;
+  position: fixed;
+  z-index: 2147483647;
+  border: 0;
+  box-shadow: 0 10px 50px 0px rgba(0,0,0,0.6);
+}
+.gr_-editor iframe {
+  width: 85%;
+  height: 85%;
+  transform: translate(7.5%, 5%);
+  transition: background-color 0.2s;
+}
+.gr-iframe-first-load {
+  transition: opacity 0.85s ease-in;
+}
+.grammarly-disable-indicator {
+  opacity: 0.5;
+}

@@ -1,0 +1,247 @@
+._988ad5-notification {
+  line-height: initial;
+  white-space: normal;
+  text-align: left;
+  float: initial;
+  clear: none;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: transparent;
+  box-shadow: none;
+  background-image: none;
+  background-position: 0% 0%;
+  background-size: auto auto;
+  background-repeat: repeat;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-attachment: scroll;
+  background-color: transparent;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  visibility: visible;
+  position: static;
+  overflow: visible;
+  opacity: 1;
+  text-align: inherit;
+  text-shadow: none;
+  widows: 0;
+  height: auto;
+  width: auto;
+  min-width: auto;
+  max-width: auto;
+  max-height: auto;
+  max-height: auto;
+  white-space: normal;
+  word-spacing: normal;
+  z-index: auto;
+  color: transparent;
+  position: absolute !important;
+  z-index: 999999 !important;
+  transition: opacity 0.2s cubic-bezier(0.255, 0.89, 0.25, 1.135), transform 0.2s cubic-bezier(0.255, 0.89, 0.25, 1.135) !important;
+  top: 0 !important;
+  right: 0 !important;
+  display: inline-block !important;
+  background: #fff !important;
+  box-shadow: 0 2px 6px 0 rgba(76,85,101,0.3) !important;
+  border-radius: 4px !important;
+  font-family: "SF UI Text", system, -apple-system, ".SFNSDisplay-Regular", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+  box-sizing: border-box !important;
+  padding: 22px 0 0 33px !important;
+  width: 464px !important;
+  height: 160px !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  opacity: 0;
+}
+
+._988ad5-notification div,
+._988ad5-notification span,
+._988ad5-notification h1,
+._988ad5-notification h2,
+._988ad5-notification h3,
+._988ad5-notification h4,
+._988ad5-notification h5,
+._988ad5-notification h6,
+._988ad5-notification p,
+._988ad5-notification a,
+._988ad5-notification a[href],
+._988ad5-notification img,
+._988ad5-notification b,
+._988ad5-notification u,
+._988ad5-notification i,
+._988ad5-notification ul,
+._988ad5-notification li,
+._988ad5-notification form,
+._988ad5-notification label,
+._988ad5-notification canvas,
+._988ad5-notification footer,
+._988ad5-notification header,
+._988ad5-notification nav,
+._988ad5-notification section,
+._988ad5-notification input[type="date"],
+._988ad5-notification input[type="email"],
+._988ad5-notification input[type="number"],
+._988ad5-notification input[type="password"],
+._988ad5-notification input[type="search"],
+._988ad5-notification input[type="tel"],
+._988ad5-notification input[type="text"],
+._988ad5-notification input[type="url"],
+._988ad5-notification button,
+._988ad5-notification button[type="button"],
+._988ad5-notification button[type="submit"],
+._988ad5-notification [role=button],
+._988ad5-notification [type=button],
+._988ad5-notification [type=submit] {
+  line-height: initial;
+  white-space: normal;
+  text-align: left;
+  float: initial;
+  clear: none;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: transparent;
+  box-shadow: none;
+  background-image: none;
+  background-position: 0% 0%;
+  background-size: auto auto;
+  background-repeat: repeat;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-attachment: scroll;
+  background-color: transparent;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  visibility: visible;
+  position: static;
+  overflow: visible;
+  opacity: 1;
+  text-align: inherit;
+  text-shadow: none;
+  widows: 0;
+  height: auto;
+  width: auto;
+  min-width: auto;
+  max-width: auto;
+  max-height: auto;
+  max-height: auto;
+  white-space: normal;
+  word-spacing: normal;
+  z-index: auto;
+}
+
+._988ad5-notification span {
+  display: inline;
+}
+
+._988ad5-notification:after {
+  content: '';
+  position: absolute;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cg fill='none' fill-rule='evenodd' transform='translate(-1 -1)'%3E%3Ccircle cx='10' cy='10' r='9.008' fill='%2300AE84'/%3E%3Cpath fill='%23FFF' d='M11.318 11.843c.052.297.335.504.64.504h.963l.56-.074c-.895 1.297-2.438 1.897-4.13 1.638-1.38-.214-2.566-1.14-3.065-2.437-1.134-2.942 1.03-5.75 3.84-5.75 1.468 0 2.75.852 3.49 1.882.193.304.58.385.864.185.267-.185.342-.533.178-.815-1.014-1.578-2.84-2.593-4.906-2.46-2.677.193-4.854 2.37-5.003 5.04-.18 3.103 2.295 5.637 5.382 5.637 1.618 0 3.065-.703 4.056-1.837l-.12.652v.585c0 .304.21.586.508.637.395.074.738-.23.738-.608v-3.52H11.93c-.38.008-.687.35-.612.74z'/%3E%3C/g%3E%3C/svg%3E") !important;
+  background-size: 64px !important;
+  display: inline-block !important;
+  height: 64px !important;
+  width: 64px !important;
+  top: 40px !important;
+  right: 31px !important;
+}
+
+._988ad5-notification._988ad5-reminder ._988ad5-title {
+  width: 325px !important;
+}
+
+._988ad5-notification._988ad5-reminder ._988ad5-text {
+  width: 335px !important;
+}
+
+._988ad5-notification._988ad5-disableOnTab ._988ad5-text {
+  width: 300px !important;
+}
+
+._988ad5-notification._988ad5-disable ._988ad5-text,
+._988ad5-notification._988ad5-disableOnTab ._988ad5-text {
+  letter-spacing: 0.2px !important;
+}
+
+._988ad5-notification ._988ad5-text,
+._988ad5-notification ._988ad5-title {
+  margin: 0 !important;
+  color: #4c5565 !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+}
+
+._988ad5-notification ._988ad5-title {
+  width: 300px !important;
+  font-size: 18px !important;
+  line-height: 22px !important;
+  margin-bottom: 5px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2px !important;
+}
+
+._988ad5-notification ._988ad5-text {
+  width: 315px !important;
+  font-weight: 200 !important;
+  margin-bottom: 15px !important;
+}
+
+._988ad5-notification ._988ad5-bold {
+  font-weight: bold !important;
+  color: #4c5565 !important;
+  letter-spacing: 1px !important;
+}
+
+._988ad5-notification ._988ad5-action {
+  font-size: 13px !important;
+  color: #00ae84 !important;
+  letter-spacing: 0.5px !important;
+  line-height: 22px !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  margin-right: 30px !important;
+  display: inline-block !important;
+}
+
+._988ad5-notification ._988ad5-action:hover {
+  color: #008464 !important;
+}
+
+._988ad5-notification ._988ad5-secondary {
+  color: #6f7787 !important;
+}
+
+._988ad5-notification ._988ad5-secondary:hover {
+  color: #4c5565 !important;
+}
+
+._988ad5-notification ._988ad5-close {
+  display: inline-block !important;
+  width: 10px !important;
+  height: 10px !important;
+  position: absolute !important;
+  top: 9px !important;
+  right: 9px !important;
+  cursor: pointer !important;
+  outline: none !important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke-linecap='square' stroke='%23ACACAE' stroke-width='1.3' fill='none' fill-rule='evenodd'%3E%3Cpath d='M10.606 1.457l-9.33 9.33M1.457 1.457l9.33 9.33'/%3E%3C/g%3E%3C/svg%3E") !important;
+  background-size: 10px !important;
+}

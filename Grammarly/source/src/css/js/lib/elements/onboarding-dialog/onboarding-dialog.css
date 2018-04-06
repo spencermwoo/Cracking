@@ -1,0 +1,129 @@
+._9375ba-onboardingDialog {
+  height: 100% !important;
+  width: 100% !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  font-family: "SF UI Text", system, -apple-system, ".SFNSDisplay-Regular", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+  color: #000 !important;
+  background: rgba(0,0,0,0.8) !important;
+  z-index: 2147483647 !important;
+  animation: gr__onboarding_dialog_appear 0.2s ease-in forwards;
+  transform: translateZ(0) !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+  contain: strict !important;
+}
+
+._9375ba-onboardingDialog * {
+  box-sizing: border-box !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+._9375ba-onboardingDialog ._9375ba-viewContainer {
+  position: relative !important;
+  height: 512px !important;
+  border-radius: 4px !important;
+}
+
+._9375ba-onboardingDialog ._9375ba-view {
+  position: absolute !important;
+  width: 100% !important;
+  opacity: 0 !important;
+  background: #fff !important;
+}
+
+._9375ba-onboardingDialog._9375ba-windows ._9375ba-footer {
+  font-weight: 400 !important;
+}
+
+._9375ba-onboardingDialog._9375ba-hide {
+  animation: gr__onboarding_dialog_disappear 0.2s ease-in 0.2s forwards;
+}
+
+._9375ba-onboardingDialog._9375ba-hide ._9375ba-content {
+  animation: gr__onboarding_dialog_content_disappear 0.3s cubic-bezier(0.4, 0, 0, 1.5) forwards;
+}
+
+._9375ba-onboardingDialog ._9375ba-content {
+  position: absolute !important;
+  left: 50% !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+  background: #fff !important;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2) !important;
+  width: 416px !important;
+  opacity: 0;
+  border-radius: 4px !important;
+  animation: gr__onboarding_dialog_content_appear 0.45s cubic-bezier(0.4, 0, 0, 1.5) 0.4s forwards;
+}
+
+._9375ba-onboardingDialog ._9375ba-btnClose {
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
+  cursor: pointer !important;
+  padding: 5px !important;
+  transition: filter 0.2s !important;
+  z-index: 100 !important;
+}
+
+._9375ba-onboardingDialog ._9375ba-btnClose:hover {
+  filter: brightness(0.8) !important;
+}
+
+._9375ba-onboardingDialog ._9375ba-btnClose:before {
+  content: '' !important;
+  display: block !important;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EClose%3C/title%3E%3Cpath d='M12.38 9.604l6.614-6.613A1.684 1.684 0 0 0 16.614.61L10 7.223 3.386.61a1.684 1.684 0 0 0-2.38 2.38l6.613 6.614-6.878 6.878a1.684 1.684 0 0 0 2.38 2.381L10 11.985l6.878 6.878a1.684 1.684 0 0 0 2.381-2.38l-6.878-6.879z' fill-rule='nonzero' fill='%23D2D4DD'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+@keyframes gr__onboarding_dialog_appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gr__onboarding_dialog_disappear {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes gr__onboarding_dialog_content_appear {
+  from {
+    transform: translate(-50%, -15%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, 15%);
+    opacity: 1;
+  }
+}
+
+@keyframes gr__onboarding_dialog_content_disappear {
+  from {
+    transform: translate(-50%, 15%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(-50%, -15%);
+    opacity: 0;
+  }
+}

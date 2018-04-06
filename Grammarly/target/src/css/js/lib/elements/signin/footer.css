@@ -1,0 +1,24 @@
+._4ea68c-footer {
+  width: 290px !important;
+  position: absolute !important;
+  bottom: 15px !important;
+  left: 50% !important;
+  font-family: "SF UI Text", system, -apple-system, ".SFNSDisplay-Regular", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 10px !important;
+  line-height: 15px !important;
+  color: #9399a7 !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+  margin-left: 0px !important;
+}
+
+._4ea68c-footer a {
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  color: #6f7787 !important;
+}
+
+._4ea68c-footer a:hover {
+  color: #434751 !important;
+}
