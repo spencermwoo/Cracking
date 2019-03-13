@@ -1,13 +1,14 @@
 There are four steps to crack a WPA/WPA2 Wi-Fi network.  
 
-**[(1) Monitor Mode ](#monitor-mode)**<br>
-**[(2) Target Router](#target-router)**<br>
-**[(3) Capture Handshake](#capture-handshake)**<br>
-**[(4) Crack Password](#crack-password)**<br>
+**[(1) Monitor Mode ](#1-monitor-mode)**<br>
+**[(2) Target Router](#2-target-router)**<br>
+**[(3) Capture Handshake](#3-capture-handshake)**<br>
+**[(4) Crack Password](#4-crack-password)**<br>
 
 
 
 For an alternative guide see [brannondorsey's](https://github.com/brannondorsey/wifi-cracking/blob/master/README.md).
+ALSO TODO : PMKID https://hashcat.net/forum/thread-7717.html
 
 ## (1) Monitor Mode 
 [Monitor mode](https://en.wikipedia.org/wiki/Monitor_mode) allows us to monitor traffic from networks which we haven't connected to
